@@ -62,6 +62,9 @@ function handleEmployeeLogin(e) {
         } 
         else if (data.user.role === "nurse") {
           navigate("/nurse");
+        }
+        else if (data.user.role === "staff") {
+          navigate("/staff");
         } else {
           navigate("/");
         }
