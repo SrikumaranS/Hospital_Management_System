@@ -1,0 +1,143 @@
+.admin-page {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+.admin-page h2 {
+  color: #186f85;
+  margin-bottom: 4px;
+}
+
+.admin-subtitle {
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* Role tabs */
+.admin-role-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.admin-role-tab {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #186f85;
+  background: #ffffff;
+  color: #186f85;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.admin-role-tab.active {
+  background: #186f85;
+  color: #fff;
+}
+
+/* Cards */
+.admin-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 18px 18px 16px;
+  margin-bottom: 18px;
+}
+
+.admin-card h3 {
+  margin: 0 0 12px;
+  color: #0b4f8a;
+}
+
+/* Form */
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.admin-form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #a3c6db;
+  font-size: 0.95rem;
+}
+
+.admin-form input:focus {
+  border-color: #186f85;
+  outline: none;
+  box-shadow: 0 0 6px rgba(24, 111, 133, 0.25);
+}
+
+.admin-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.admin-form-actions button {
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #186f85;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-btn-secondary {
+  background: #e4f5f8;
+  color: #186f85;
+}
+
+/* Messages */
+.admin-message {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #e4f5e7;
+  color: #145c32;
+  font-size: 0.9rem;
+}
+
+/* Table */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.admin-table thead {
+  background: #e4f5f8;
+  color: #186f85;
+}
+
+.admin-small-btn {
+  margin-right: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #186f85;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.admin-small-btn.admin-danger {
+  background: #d32f2f;
+}
+
+.admin-small-btn:last-child {
+  margin-right: 0;
+}

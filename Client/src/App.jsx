@@ -1,28 +1,56 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import LoginPortal from './pages/LoginPortal/LoginPortal';
-import PatientDashboard from './pages/PatientDashboard/PatientDashboard';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
+import LoginPortal from "./pages/LoginPortal/LoginPortal";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
 
-export default function App() {
-  // This token would generally be handled with context or localStorage for persistent logins
-  const [token, setToken] = useState(localStorage.getItem('token') || "");
+function AppShell() {
+  const [token, setToken] = useState(localStorage.getItem("token") || "");
+  const [role, setRole] = useState(localStorage.getItem("role") || "");
+
+  useEffect(() => {
+    const t = localStorage.getItem("token");
+    const r = localStorage.getItem("role");
+    if (t) setToken(t);
+    if (r) setRole(r);
+  }, []);
 
   return (
-    <BrowserRouter>
+    <>
+      <Navbar
+        isLoggedIn={!!token}
+        role={role}
+        onLogout={() => {
+          setToken("");
+          setRole("");
+        }}
+      />
       <Routes>
-        <Route path="/login" element={
-          <LoginPortal onLoginSuccess={(tok) => {
-            setToken(tok);
-            localStorage.setItem('token', tok); // persist for refresh
-          }} />
-        } />
-        <Route path="/patient-dashboard" element={
-          <PatientDashboard token={token} />
-        } />
-        <Route path="*" element={
-          token ? <PatientDashboard token={token} /> : <LoginPortal onLoginSuccess={tok => { setToken(tok); localStorage.setItem('token', tok);} } />
-        } />
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/login"
+          element={
+            <LoginPortal
+              onLoginSuccess={(tok) => {
+                setToken(tok);
+                localStorage.setItem("token", tok);
+                localStorage.setItem("role", user.role);
+                localStorage.setItem("userName", user.name);
+              }}
+            />
+          }
+        />
+        <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppShell />
     </BrowserRouter>
   );
 }

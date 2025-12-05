@@ -1,0 +1,99 @@
+.hm-navbar {
+  height: 64px;
+  background: #186f85;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.hm-logo {
+  font-weight: 700;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+.hm-logo span {
+  color: #f9e8cd;
+}
+
+.hm-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hm-link-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.hm-login-btn,
+.hm-logout-btn {
+  border: 1px solid #f9e8cd;
+  padding: 6px 14px;
+  border-radius: 18px;
+  font-weight: 600;
+}
+
+.hm-login-btn:hover,
+.hm-logout-btn:hover {
+  background: #0b4f8a;
+}
+
+.hm-account-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.hm-user-menu {
+  position: relative;
+}
+
+.hm-user-btn {
+  border: 1px solid #f9e8cd;
+  padding: 6px 14px;
+  border-radius: 18px;
+  font-weight: 600;
+  background: transparent;
+}
+
+.hm-user-btn:hover {
+  background: #0b4f8a;
+}
+
+.hm-user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: #ffffff;
+  color: #186f85;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  min-width: 130px;
+  z-index: 20;
+  padding: 6px 0;
+}
+
+.hm-user-dropdown button {
+  width: 100%;
+  text-align: left;
+  padding: 8px 14px;
+  border: none;
+  background: transparent;
+  color: #186f85;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.hm-user-dropdown button:hover {
+  background: #e4f5f8;
+}
