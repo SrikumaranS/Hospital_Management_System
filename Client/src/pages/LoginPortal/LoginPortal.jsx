@@ -56,8 +56,10 @@ function handleEmployeeLogin(e) {
 
         if (data.user.role === "admin") {
           navigate("/admin");
+        }
+        else if (data.user.role === "doctor") {
+          navigate("/doctor");
         } else {
-          // later: route doctor/nurse/staff to their pages
           navigate("/");
         }
       } else {
