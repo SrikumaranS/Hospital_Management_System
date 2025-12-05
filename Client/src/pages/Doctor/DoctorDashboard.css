@@ -1,0 +1,124 @@
+.doctor-page {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+.doctor-page h2 {
+  color: #186f85;
+  margin-bottom: 4px;
+}
+
+.doctor-subtitle {
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.doctor-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 16px 18px 14px;
+  margin-bottom: 18px;
+}
+
+.doctor-card h3 {
+  margin: 0 0 10px;
+  color: #0b4f8a;
+}
+
+.doctor-message {
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #e4f5e7;
+  color: #145c32;
+  font-size: 0.9rem;
+}
+
+/* Table */
+.doctor-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.doctor-table th,
+.doctor-table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.doctor-table thead {
+  background: #e4f5f8;
+  color: #186f85;
+}
+
+/* Buttons */
+.doc-small-btn {
+  margin-right: 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  background: #186f85;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.doc-small-btn.doc-leave {
+  background: #d32f2f;
+}
+
+.doc-small-btn.doc-presc {
+  background: #318a56;
+}
+
+/* Prescription form */
+.doctor-prescription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.doctor-prescription-form input,
+.doctor-prescription-form textarea {
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid #a3c6db;
+  font-size: 0.95rem;
+}
+
+.doctor-prescription-form textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.doctor-prescription-form input:focus,
+.doctor-prescription-form textarea:focus {
+  border-color: #186f85;
+  outline: none;
+  box-shadow: 0 0 6px rgba(24, 111, 133, 0.25);
+}
+
+.doctor-prescription-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.doctor-prescription-actions button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #186f85;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.doc-btn-secondary {
+  background: #e4f5f8;
+  color: #186f85;
+}
