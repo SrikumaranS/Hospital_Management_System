@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import LoginPortal from "./pages/LoginPortal/LoginPortal";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import DoctorDashboard from "./pages/Doctor/DoctorDashboard";
+import NurseDashboard from "./pages/Nurse/NurseDashboard";
 
 function AppShell() {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -44,6 +45,7 @@ function AppShell() {
         />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/doctor" element={<DoctorDashboard />} />
+        <Route path="/nurse" element={<NurseDashboard />} />
       </Routes>
     </>
   );
